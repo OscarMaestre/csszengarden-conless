@@ -1,0 +1,45 @@
+/*Archivo less para CSS Zen Garden*/
+
+@import url('https://fonts.googleapis.com/css?family=Gelasio|Girassol|Inria+Serif&display=swap');
+
+/*Distancias*/
+@espacioentrecajas:10px;
+@paddingbasico: @espacioentrecajas;
+
+/*Colores*/
+@rojobasicofondos:224;
+@verdebasicofondos:232;
+@azulbasicofondos:254;
+
+@rojobasicotextos:20;
+@verdebasicotextos:13;
+@azulbasicotextos:94;
+
+
+@colorfondooscuro:rgb(@rojobasicofondos, @verdebasicofondos, @azulbasicofondos);
+
+@colortextoclaro:rgb(@rojobasicotextos, @verdebasicotextos, @azulbasicotextos);
+
+.coloresintensos{
+    background-color: @colorfondooscuro;
+    color: @colortextoclaro;
+}
+body{
+    background-attachment: #e0e8fe;
+    font-family: 'Girassol', cursive;    
+    .coloresintensos()
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+    font-family: 'Gelasio', serif;
+}
+
+div{
+    margin: @espacioentrecajas;
+    padding: @paddingbasico;
+}
+
+:not (.summary) p::first-letter{
+    font-size: 3em;
+}

@@ -1,0 +1,50 @@
+/*Archivo less para CSS Zen Garden*/
+@font-face {
+  font-family: 'Gelasio';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Gelasio Regular'), local('Gelasio-Regular'), url(https://fonts.gstatic.com/s/gelasio/v1/cIf9MaFfvUQxTTqS9C6hZA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Girassol';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Girassol Regular'), local('Girassol-Regular'), url(https://fonts.gstatic.com/s/girassol/v1/JTUUjIo_-DK48laaNB9KxW4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inria Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Inria Serif Regular'), local('InriaSerif-Regular'), url(https://fonts.gstatic.com/s/inriaserif/v1/fC1lPYxPY3rXxEndZJAzN3Srdyg.ttf) format('truetype');
+}
+/*Distancias*/
+/*Colores*/
+.coloresintensos {
+  background-color: #e0e8fe;
+  color: #140d5e;
+}
+body {
+  background-attachment: #e0e8fe;
+  font-family: 'Girassol', cursive;
+  background-color: #e0e8fe;
+  color: #140d5e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  font-family: 'Gelasio', serif;
+}
+div {
+  margin: 10px;
+  padding: 10px;
+}
+:not (.summary) p::first-letter {
+  font-size: 3em;
+}
