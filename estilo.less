@@ -20,9 +20,28 @@
 
 @colortextoclaro:rgb(@rojobasicotextos, @verdebasicotextos, @azulbasicotextos);
 
+@incrementocolor:50;
+
+
+@colorfondomasoscuro: rgb(
+        @rojobasicofondos  - @incrementocolor, 
+        @verdebasicofondos - @incrementocolor, 
+        @azulbasicofondos  - @incrementocolor
+    );
+@colortextomasclaro: rgb(
+        @rojobasicotextos  + @incrementocolor, 
+        @verdebasicotextos + @incrementocolor, 
+        @azulbasicotextos  + @incrementocolor
+    );
+
 .coloresintensos{
     background-color: @colorfondooscuro;
     color: @colortextoclaro;
+}
+
+.coloresmuchocontraste{
+    background-color: @colorfondomasoscuro;
+    color: @colortextomasclaro;
 }
 body{
     background-attachment: #e0e8fe;
@@ -42,6 +61,31 @@ div{
 
 #zen-supporting{
     display:grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+
+}
+
+#zen-explanation, #zen-participation, #zen-benefits, #zen-requirements{
+    .coloresmuchocontraste()
+}
+
+#zen-explanation{
+    grid-row: ;
+    grid-column: ;
+}
+
+#zen-participation{
+    grid-row: ;
+    grid-column: ;
+}
+
+#zen-benefits{
+    grid-row: ;
+    grid-column: ;
+}
+
+#zen-requirements{
+    grid-row: ;
+    grid-column: ;
 }

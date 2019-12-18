@@ -26,6 +26,10 @@
   background-color: #e0e8fe;
   color: #140d5e;
 }
+.coloresmuchocontraste {
+  background-color: #aeb6cc;
+  color: #463f90;
+}
 body {
   background-attachment: #e0e8fe;
   font-family: 'Inria Serif', cursive;
@@ -44,4 +48,16 @@ h6 {
 div {
   margin: 10px;
   padding: 10px;
+}
+#zen-supporting {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
+}
+#zen-explanation,
+#zen-participation,
+#zen-benefits,
+#zen-requirements {
+  background-color: #aeb6cc;
+  color: #463f90;
 }
