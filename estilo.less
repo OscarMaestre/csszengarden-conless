@@ -3,8 +3,9 @@
 @import url('https://fonts.googleapis.com/css?family=Gelasio|Girassol|Inria+Serif&display=swap');
 
 /*Distancias*/
-@espacioentrecajas:10px;
-@paddingbasico: @espacioentrecajas;
+@espacioentrecajas:20px;
+@paddingbasico: @espacioentrecajas+10px;
+@radiobordes:15px;
 
 /*Colores*/
 @rojobasicofondos:224;
@@ -22,7 +23,6 @@
 
 @incrementocolor:50;
 
-
 @colorfondomasoscuro: rgb(
         @rojobasicofondos  - @incrementocolor, 
         @verdebasicofondos - @incrementocolor, 
@@ -39,53 +39,131 @@
     color: @colortextoclaro;
 }
 
+.coloresinvertidos{
+    background-color: @colortextomasclaro;
+    color: @colorfondooscuro;        
+}
 .coloresmuchocontraste{
     background-color: @colorfondomasoscuro;
     color: @colortextomasclaro;
 }
 body{
-    background-attachment: #e0e8fe;
+    background-color: #e0e8fe;
     font-family: 'Inria Serif', cursive;    
     .coloresintensos()
 }
 
+abbr{
+    font-style: italic;
+}
 h1, h2, h3, h4, h5, h6{
     text-align: center;
     font-family: 'Gelasio', serif;
 }
 
-div{
+div, header, aside, footer{
+    border-radius: @radiobordes;
+}
+.espaciadocajas{
     margin: @espacioentrecajas;
     padding: @paddingbasico;
+}
+div, aside, #zen-intro{
+    .espaciadocajas();
+}
+
+#zen-intro>header, #zen-intro>div{
+    .coloresinvertidos();
+    .espaciadocajas();
 }
 
 #zen-supporting{
     display:grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto 1fr 1fr auto auto auto auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
 
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
+
+
+a:link{
+    background-color: @colortextomasclaro;
+    color: @colorfondooscuro;        
 }
 
 #zen-explanation, #zen-participation, #zen-benefits, #zen-requirements{
-    .coloresmuchocontraste()
+    .coloresmuchocontraste();
 }
 
 #zen-explanation{
-    grid-row: escape("1/2");
-    grid-column: ;
+    grid-row: escape("2/3");
+    grid-column: escape("1/5");
 }
 
 #zen-participation{
-    grid-row: ;
-    grid-column: ;
+    grid-row: escape("3/4");
+    grid-column: escape("1/6");
 }
 
 #zen-benefits{
-    grid-row: ;
-    grid-column: ;
+    grid-row: escape("1/2");
+    grid-column: escape("1/10");
 }
 
 #zen-requirements{
-    grid-row: ;
-    grid-column: ;
+    grid-row: escape("2/4");
+    grid-column: escape("6/10");
+}
+
+#zen-supporting>footer{
+    grid-row: escape("2/3");
+    grid-column: escape("5/6");
+    padding:auto;
+    
+    a{
+        display: block;       
+        .espaciadocajas();
+        text-align: center;
+        border-radius:@radiobordes;
+
+    }
+}
+
+aside.sidebar>.wrapper{
+    .coloresinvertidos();
+
+    display:grid;
+    grid-template-rows:     1fr 1fr 1fr;
+    grid-template-columns:  1fr 1fr 1fr;
+    font-family: Girassol, sans-serif;    
+
+    li{
+        list-style-type: none;        
+        display: table-row-group;
+    }
+    a{
+        background-color: @colortextomasclaro;
+        color: @colorfondooscuro;        
+    }
+    h3{
+        text-align: left;
+        display: block;
+    }
+}
+#design-selection{
+    grid-row:     escape("1/4");
+    grid-column:  escape("1/2");
+}
+#design-archives{
+    grid-row:     escape("1/4");
+    grid-column:  escape("2/3");
+}
+#zen-resources{
+    grid-row:     escape("1/4");
+    grid-column:  escape("3/4");
 }

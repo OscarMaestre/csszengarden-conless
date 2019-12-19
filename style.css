@@ -26,15 +26,21 @@
   background-color: #e0e8fe;
   color: #140d5e;
 }
+.coloresinvertidos {
+  background-color: #463f90;
+  color: #e0e8fe;
+}
 .coloresmuchocontraste {
   background-color: #aeb6cc;
   color: #463f90;
 }
 body {
-  background-attachment: #e0e8fe;
   font-family: 'Inria Serif', cursive;
   background-color: #e0e8fe;
   color: #140d5e;
+}
+abbr {
+  font-style: italic;
 }
 h1,
 h2,
@@ -45,14 +51,42 @@ h6 {
   text-align: center;
   font-family: 'Gelasio', serif;
 }
-div {
-  margin: 10px;
-  padding: 10px;
+div,
+header,
+aside,
+footer {
+  border-radius: 15px;
+}
+.espaciadocajas {
+  margin: 20px;
+  padding: 30px;
+}
+div,
+aside,
+#zen-intro {
+  margin: 20px;
+  padding: 30px;
+}
+#zen-intro > header,
+#zen-intro > div {
+  background-color: #463f90;
+  color: #e0e8fe;
+  margin: 20px;
+  padding: 30px;
 }
 #zen-supporting {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: auto 1fr 1fr auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+#zen-supporting footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+a:link {
+  background-color: #463f90;
+  color: #e0e8fe;
 }
 #zen-explanation,
 #zen-participation,
@@ -60,4 +94,64 @@ div {
 #zen-requirements {
   background-color: #aeb6cc;
   color: #463f90;
+}
+#zen-explanation {
+  grid-row: 2/3;
+  grid-column: 1/5;
+}
+#zen-participation {
+  grid-row: 3/4;
+  grid-column: 1/6;
+}
+#zen-benefits {
+  grid-row: 1/2;
+  grid-column: 1/10;
+}
+#zen-requirements {
+  grid-row: 2/4;
+  grid-column: 6/10;
+}
+#zen-supporting > footer {
+  grid-row: 2/3;
+  grid-column: 5/6;
+  padding: auto;
+}
+#zen-supporting > footer a {
+  display: block;
+  margin: 20px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+}
+aside.sidebar > .wrapper {
+  background-color: #463f90;
+  color: #e0e8fe;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-family: Girassol, sans-serif;
+}
+aside.sidebar > .wrapper li {
+  list-style-type: none;
+  display: table-row-group;
+}
+aside.sidebar > .wrapper a {
+  background-color: #463f90;
+  color: #e0e8fe;
+}
+aside.sidebar > .wrapper h3 {
+  text-align: left;
+  display: block;
+}
+#design-selection {
+  grid-row: 1/4;
+  grid-column: 1/2;
+}
+#design-archives {
+  grid-row: 1/4;
+  grid-column: 2/3;
+}
+#zen-resources {
+  grid-row: 1/4;
+  grid-column: 3/4;
 }
